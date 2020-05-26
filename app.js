@@ -10,14 +10,14 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 //MONGOOSE/MODEL CONFIG
-var blogSchema = new mongoose.schema({
+var blogSchema = new mongoose.Schema({
   title: String,
   image: String,
   body : String,
   created: {type: Date, default: Date.now  }
 });
 
-var Blog = mongoose.model("Blog", blogschema)
+var Blog = mongoose.model("Blog", blogSchema)
 
 //RESTFUL ROUTES
 
