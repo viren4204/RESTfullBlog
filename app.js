@@ -36,6 +36,7 @@ app.get("/", function(req,res){
   res.redirect("/blogs");
 });
 
+//INDEX ROUTE
 app.get("/blogs", function(req, res){
   Blog.find({}, function(err, blogs){
     if (err) {
@@ -45,6 +46,13 @@ app.get("/blogs", function(req, res){
     }
   });
 });
+
+
+// NEW ROUTE
+app.get("/blogs/new", function(req, res){
+  res.render('new');
+})
+
 
 app.listen(3000, function(){
   console.log("server has started on port 300");
