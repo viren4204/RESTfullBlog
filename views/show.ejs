@@ -10,6 +10,9 @@
       <div class="description">
         <p><%= blog.body %></p>
       </div>
+      <form class="" action="/blogs/<%= blog._id %>?_method=DELETE" method="post">
+          <button class="ui red big inverted button">Delete</button>
+      </form>
     </div>
   </div>
 
